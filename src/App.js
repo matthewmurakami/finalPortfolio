@@ -60,10 +60,29 @@ const TypingHeader = () => {
   return <h2>I {text}<span className="cursor">|</span></h2>;
 };
 
+const Dropdown = ({ navigate }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openDropdown = () => setIsOpen(true);
+  const closeDropdown = () => setIsOpen(false);
+  return (
+    <div className="dropdown" onMouseEnter={openDropdown} onMouseLeave={closeDropdown}>
+      <button className="dropdown-button">Case Studies</button>
+      {isOpen && (
+        <div className="dropdown-content">
+          <button onClick={() => navigate('/responsive-redesign')}>Responsive Redesign</button>
+          <button onClick={() => navigate('/iterative-development')}>Iterative Development</button>
+          <button onClick={() => navigate('/development-process')}>Development Process</button>
+        </div>
+      )}
+    </div>
+  );
+};
+
 const HomePage = () => {
   const component = useRef();
   const slider = useRef();
-  const navigate = useNavigate(); // Added useNavigate hook for navigation
+  const navigate = useNavigate();
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -76,8 +95,12 @@ const HomePage = () => {
         scrollTrigger: {
           trigger: slider.current,
           pin: true,
-          scrub: 1,
-          snap: 1 / (panels.length - 1),
+          scrub: 0,  // Reduced scrub time for a quicker reaction time
+          snap: {
+            snapTo: 1 / (panels.length - 1),
+            duration: {min: 0.1, max: 0.3},  // Min and max duration of the snap
+            delay: 0  // No delay before starting to snap
+          },
           end: () => "+=" + slider.current.offsetWidth,
         }
       });
@@ -86,8 +109,6 @@ const HomePage = () => {
     return () => ctx.revert();
   }, []);
   
-  
-
   const scrollToSection = (section) => {
     if (section === "#portfolio") {
       gsap.to(window, { duration: 1, scrollTo: { y: slider.current, autoKill: false } });
@@ -96,36 +117,23 @@ const HomePage = () => {
     }
   };
 
+
   return (
     <div className="App" ref={component}>
-      <nav className="navbar">
-        <button onClick={() => scrollToSection("#home")}>Home</button>
-        <button onClick={() => scrollToSection("#about")}>About</button>
-        <button onClick={() => scrollToSection("#caseStudies")}>Case Studies</button>
-        <button onClick={() => scrollToSection("#contact")}>Contact</button>
-      </nav>
+      <div className="App" ref={component}>
+        <nav className="navbar">
+          <button onClick={() => scrollToSection("#home")}>Home</button>
+          <button onClick={() => scrollToSection("#about")}>About</button>
+          <Dropdown navigate={navigate} />
+          <button onClick={() => scrollToSection("#contact")}>Contact</button>
+        </nav>
+        {/* Remaining content unchanged */}
+      </div>
 
-
-      <a className="relative block w-1/4 bg-gray-900 group" href="#!">
-          <img
-            className="absolute inset-0 object-cover w-full h-full group-hover:opacity-50"
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20220221132017/download.png"
-          />
-          <div className="relative p-5">
-            <div className="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
-              <div className="p-2 text-center">
-                <p className="text-lg text-white">Welcome to GeeksforGeeks</p>
-                <button className="mt-4 px-4 py-2 text-sm text-white bg-green-600">
-                  Visit site
-                </button>
-              </div>
-            </div>
-          </div>
-        </a>
 
       <div id="home" className="firstContainer">
         <h1 class="welcome">Welcome.</h1>
-        <h1>My name is Matt Murakami.</h1>
+        <h1 className="name">My name is Matt Murakami.</h1>
         <TypingHeader/>
       </div>
 
@@ -141,20 +149,69 @@ const HomePage = () => {
         <div className="description panel">
           <div id="section1" className="content">
             <p>
-              Please keep scrolling to see my three latest works that I've proudly
+              Please scroll to see my three latest works that I've proudly
               put for display on my portfolio
             </p>
           </div>
         </div>
 
-        <div id="section2" className="panel" onClick={() => navigate('/responsive-redesign')}>
-          <img src={redesign} alt="Responsive Redesign" />
+        <div id="section2" className="panel" onClick={() => navigate('/responsive-redesign')}>                
+          <a className="center block w-2/4 bg-black-900 group" href="#!">
+            <img
+              className="center inset-0 object-cover w-full h-full group-hover:opacity-50"
+              src={redesign}
+              alt="Responsive Redesign"
+            />
+            <div className="center p-5">
+              <div className="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+                <div className="p-2 text-center">
+                  <p className="text-lg text-white">Responsive Redesign</p>
+                  <button className="mt-4 px-4 py-2 text-sm text-white bg-beige-600">
+                    Check it out
+                  </button>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
+
         <div id="section3" className="panel" onClick={() => navigate('/iterative-development')}>
-          <img src={iterative} alt="Iterative development" />
+          <a className="center block w-2/4 bg-black-900 group" href="#!">
+              <img
+                className="center inset-0 object-cover w-full h-full group-hover:opacity-50"
+                src={iterative}
+                alt="iterative development"
+              />
+              <div className="center p-5">
+                <div className="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+                  <div className="p-2 text-center">
+                    <p className="text-lg text-white">Iterative Development</p>
+                    <button className="mt-4 px-4 py-2 text-sm text-white bg-beige-600">
+                      Check it out
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
         </div>
         <div id="section4" className="panel" onClick={() => navigate('/development-process')}>
-          <img src={development} alt="Development process" />
+          <a className="center block w-2/4 bg-black-900 group" href="#!">
+              <img
+                className="center inset-0 object-cover w-full h-full group-hover:opacity-50"
+                src={development}
+                alt="Development Process"
+              />
+              <div className="center p-5">
+                <div className="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+                  <div className="p-2 text-center">
+                    <p className="text-lg text-white">Development Process</p>
+                    <button className="mt-4 px-4 py-2 text-sm text-white bg-beige-600">
+                      Check it out
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
         </div>
       </div>
       

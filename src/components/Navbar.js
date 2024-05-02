@@ -27,9 +27,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <button onClick={() => navigate('/')}>Home</button>
-      <button onClick={() => navigate('/about')}>About</button>
+      <button onClick={() => navigate('/')}>About</button>
       <Dropdown navigate={navigate} />
-      <button onClick={() => navigate('/contact')}>Contact</button>
+      <button onClick={() => navigate('/')}>Contact</button>
     </nav>
   );
 };

@@ -42,10 +42,14 @@ body {
 
 .lastContainer h1 {
   font-size: 75px;
+  font-weight: bolder;
 }
 
 .about h1 {
   font-size: 75px;
+  font-weight: bolder;
+
+
 }
 
 h2 {

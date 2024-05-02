@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
@@ -9,14 +9,14 @@ import "./styles.css";
 import ResponsiveRedesignPage from './components/ResponsiveRedesignPage';
 import IterativeDevelopmentPage from './components/IterativeDevelopmentPage';
 import DevelopmentProcessPage from './components/DevelopmentProcessPage';
+import Navbar from './components/Navbar';
+
 
 // Image imports
 import redesign from './images/redesign.png';
 import development from './images/development.png';
 import iterative from './images/iterative.png';
 import matt from './images/matt.png';
-
-// Social media icons
 import twitter from './images/twitter.png';
 import linkedin from './images/linkedin.png';
 import git from './images/git.png';
@@ -60,29 +60,11 @@ const TypingHeader = () => {
   return <h2>I {text}<span className="cursor">|</span></h2>;
 };
 
-const Dropdown = ({ navigate }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openDropdown = () => setIsOpen(true);
-  const closeDropdown = () => setIsOpen(false);
-  return (
-    <div className="dropdown" onMouseEnter={openDropdown} onMouseLeave={closeDropdown}>
-      <button className="dropdown-button">Case Studies</button>
-      {isOpen && (
-        <div className="dropdown-content">
-          <button onClick={() => navigate('/responsive-redesign')}>Responsive Redesign</button>
-          <button onClick={() => navigate('/iterative-development')}>Iterative Development</button>
-          <button onClick={() => navigate('/development-process')}>Development Process</button>
-        </div>
-      )}
-    </div>
-  );
-};
-
 const HomePage = () => {
   const component = useRef();
   const slider = useRef();
   const navigate = useNavigate();
+  
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -117,19 +99,8 @@ const HomePage = () => {
     }
   };
 
-
   return (
     <div className="App" ref={component}>
-      <div className="App" ref={component}>
-        <nav className="navbar">
-          <button onClick={() => scrollToSection("#home")}>Home</button>
-          <button onClick={() => scrollToSection("#about")}>About</button>
-          <Dropdown navigate={navigate} />
-          <button onClick={() => scrollToSection("#contact")}>Contact</button>
-        </nav>
-        {/* Remaining content unchanged */}
-      </div>
-
 
       <div id="home" className="firstContainer">
         <h1 class="welcome">Welcome.</h1>
@@ -233,13 +204,67 @@ const HomePage = () => {
         </div>
       </div>
 
+      <section className="bg-#b9b3a9">
+            <div className="max-w-screen-xl 2xl:max-w-screen-2xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 flex flex-col justify-center lg:h-screen">
+              <div className="grid grid-cols-1 gap-6 mt-12 list-none md:grid-cols-3 lg:mt-24 max-w-7xl mx-auto" role="list">
+
+              <article 
+                className="mx-auto shadow-xl bg-cover bg-center min-h-150 w-full md:w-auto relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
+                style={{backgroundImage: `url(${redesign})`, backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'}
+              >
+                <div className="relative h-full min-h-150 flex flex-wrap flex-col pt-[30rem]">
+                <div className="bg-black p-8 h-full justify-end flex flex-col">
+                  <h1 className="text-white mt-2 text-xl mb-5 transform translate-y-20 uppercase group-hover:translate-y-0 duration-300 group-hover:text-orange-500"> 01⏤ Experience </h1>
+                  <p className="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500 "> Crafting an effortless journey with user-first. </p>
+                </div>
+                </div>
+              </article>
+
+              <article
+                className="mx-auto shadow-xl bg-cover bg-center min-h-150 w-full md:w-auto relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
+                style={{backgroundImage: `url(${development})`, backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'}
+              >
+                <div className="relative h-full min-h-150 flex flex-wrap flex-col pt-[30rem]">
+                <div className="bg-black p-8 h-full justify-end flex flex-col">
+                  <h1 className="text-white mt-2 text-xl mb-5 transform translate-y-20 uppercase group-hover:translate-y-0 duration-300 group-hover:text-indigo-400"> 02⏤ Interaction </h1>
+                  <p className="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500 "> Our platform is designed for simplicity and ease. </p>
+                </div>
+                </div>
+              </article>
+              
+              <article
+                className="mx-auto shadow-xl bg-cover bg-center min-h-150 w-full md:w-auto relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
+                style={{backgroundImage: `url(${iterative})`, backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'}
+              >
+                <div className="relative h-full min-h-150 flex flex-wrap flex-col pt-[30rem]">
+                <div className="bg-black p-8 h-full justify-end flex flex-col">
+                  <h1 className="text-white mt-2 text-xl mb-5 transform translate-y-20 uppercase group-hover:translate-y-0 duration-300 group-hover:text-cyan-400"> 03⏤ Design </h1>
+                  <p className="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500 "> Our design philosophy centers around the user. </p>
+                </div>
+                </div>
+              </article>
+              
+              </div>
+            </div>
+          </section>
+      
+
     </div>
+
+    
   );
 };
 
 const App = () => {
   return (
     <Router>
+      <Navbar />  {/* This line includes the Navbar across all routes */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/responsive-redesign" element={<ResponsiveRedesignPage />} />

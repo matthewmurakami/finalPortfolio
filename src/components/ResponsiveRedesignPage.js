@@ -35,16 +35,15 @@ const ResponsiveRedesignPage = () => {
             <h2 className="container-header">Introduction</h2>
             <p className="container-body">
               The goal for this project was to identify a webpage that was deficient
-              in usability and accessibility standards so that I could improve upon 
+              in usability and accessibility standards so that I could improve 
               it. After browsing the internet, I found this page and knew that I had 
               to do it as I adore dogs. <b>Click on the image below in order to view the 
-              webpage for the French National Club for the Beauceron breed.</b> This website
-              is dedicated to the Beauceron dog breed as it provides not only insightful
-              information about the breed and where you can adopt them, but also 
-              shares how the club hosts competitions and exhibitions as well. I 
-              chose this website because of how the text is cluttered with little 
-              to no structure and because of how busy it is with its color choices 
-              and repeating background images.
+              webpage for the French National Club for the Beauceron breed.</b> This website 
+              is dedicated to the Beauceron dog breed; it not only provides insightful 
+              information about the breed and where to adopt them but also shares details 
+              about competitions and exhibitions hosted by the club. I chose this website 
+              because its text is cluttered with little to no structure, and it is visually 
+              overwhelming due to busy color choices and repeating background images.
             </p>
 
             <a href="https://amisdubeauceron.org/club/club-presentation.html" target="_blank" rel="noopener noreferrer">
@@ -69,13 +68,12 @@ const ResponsiveRedesignPage = () => {
                 <li className='responsive-bullets'><b>Learnability:</b> New users are likely to find the layout overwhelming
                 because it has multiple columns and sections along with a high density of 
                 text and images that lack a clear visual hierarchy and consistent formatting. 
-                This makes it difficult for them to quickly discern important information. </li>
+                This makes it difficult for them to discern important information. </li>
 
-                <li className='responsive-bullets'><b>Memorability:</b> Casual users may also struggle with the page's 
-                memorability as the non-intuitive design requires a user to relearn the 
-                interface upon each visit. This can be seen through the absence of logically 
-                arranged links and text, which makes it hard to recall the location of specific 
-                information. </li>
+                <li className='responsive-bullets'><b>Memorability:</b> Casual users may struggle 
+                with the page's memorability, as the non-intuitive design requires them to relearn 
+                the interface with each visit. The absence of logically arranged links and text makes 
+                it difficult to recall the location of specific information.</li>
 
                 <li className='responsive-bullets'><b>Efficiency:</b> The efficiency of the site is compromised by the use of various text 
                 colors to differentiate links, section titles, and dividers, with some overlap 
@@ -108,11 +106,11 @@ const ResponsiveRedesignPage = () => {
             <h2 className="container-header">Redesign Process</h2>
             <h3 className="container-header3">Sketches</h3>
             <p className="container-body">
-            To improve the user experience, I began my redesign by taking nine minutes 
-            to create nine different sketches (using one minute per sketch) so that I could 
-            come up with a wide variety of ideas. Once I was finished with the sketches, 
-            I created a final sketch that incorporated my favorite ideas from the previous 
-            exercise which would serve as the groundwork for my redesign.
+            To improve the user experience, I started my redesign by spending nine minutes 
+            creating nine different sketches (one minute per sketch) to generate a wide variety 
+            of ideas. Once finished, I created a final sketch that incorporated my 
+            favorite ideas from the previous exercise, which would serve as the foundation for my 
+            redesign.
             </p>
             <div className="sketches-container">
               <img 
@@ -130,7 +128,7 @@ const ResponsiveRedesignPage = () => {
 
             <h3 className="container-header3">Lo-Fi Mockups</h3>
               <p>
-                With the Lo-Fi mockup, I wanted to address some of the shortcomings of the original webpage. 
+                Below from left to righ are my mobile, tablet, and laptop Low Fidelity mockups. With these mockups, I wanted to address some of the shortcomings of the original webpage. 
                 This can be seen with the menu bar at the top which would remove a lot of the clutter, an icon 
                 to hide the menu bar to accommodate different screensizes, and a very clear visual heirarchy. 
               </p>
@@ -159,7 +157,8 @@ const ResponsiveRedesignPage = () => {
           <section className="container-content">
             <h3 className="container-header3">Hi-Fi Mockups</h3>
               <p className="container-body">
-                Transitioning to the Hi-Fi mockup, I made the following changes:
+                Below from left to right are my mobile, tablet, and laptop High Fidelity mockups. 
+                In this next stage, I made the following changes:
               </p>
                 <ul className="takeaway-centered-bullets">
                 <li>Included a subtitle in the main section which was important 
@@ -203,17 +202,21 @@ const ResponsiveRedesignPage = () => {
             <h2 className="container-header">Final Product</h2>
             <p className="container-body">
             Below is my final redesign! <b>The deployed website can be accessed by 
-            clicking on the image below.</b> The notable change from the high fidelity
-             mockup is that I removed the quickscroll menu when using a mobile 
-             device such as a phone or tablet. I made this decision because when 
-             I was testing the page on my phone, I found that the screen was too
-              cluttered. Accessibility-wise, I made some slight variations to 
-              further improve my webpage. The first of which was to change the 
-              menu bar so that the background was black to make it easier to read
-               the items. The next change I made was to use clickable buttons 
-               instead of hyperlinks in the main body of the page. The last of 
-               the accessibility modifications was to add external ink icons to 
-               the flags and cards which would let a user know that they are clickable.
+            clicking on the image below.</b> A notable change from the high-fidelity 
+            mockup is that I removed the quick-scroll menu for mobile devices such as 
+            phones and tablets. I made this decision because, during testing on my phone, 
+            I found the screen to be too cluttered. Regarding accessibility, I made slight 
+            adjustments to further improve my webpage. First, I changed the menu bar 
+            background to black to make the items easier to read. Next, I replaced 
+            hyperlinks in the main body of the page with clickable buttons. Lastly, I 
+            added external link icons to the flags and cards to indicate that they are 
+            clickable.
+
+
+
+
+
+
             </p>
 
 

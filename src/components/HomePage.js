@@ -16,6 +16,7 @@ import twitter from '../images/twitter.png';
 import linkedin from '../images/linkedin.png';
 import git from '../images/git.png';
 import mail from '../images/email.png';
+import fondaphone from '../images/fondaphone.png';
 
 
 const TypingHeader = () => {
@@ -121,7 +122,7 @@ const HomePage = ({ homeRef, aboutRef, caseStudiesRef, contactRef }) => {
                 </Link>
             </article>
             <article className="mx-auto shadow-xl bg-cover bg-center min-h-150 w-full md:w-auto relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
-                style={{backgroundImage: `url(${iterative})`, backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
+                style={{backgroundImage: `url(${fondaphone})`, backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'}
             >
@@ -138,47 +139,7 @@ const HomePage = ({ homeRef, aboutRef, caseStudiesRef, contactRef }) => {
                     </div>
                 </Link>
             </article>
-            
-
-            {/* <article
-                className="mx-auto shadow-xl bg-cover bg-center min-h-150 w-full md:w-auto relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
-                style={{backgroundImage: `url(${development})`, backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'}
-            >
-                <Link to="/development-process">
-                    <div className="relative h-full min-h-150 flex flex-wrap flex-col pt-[30rem]">
-                    <div className="bg-black p-12 h-full justify-end flex flex-col">
-                        <h1 className="text-white mt-2 text-xl mb-5 transform translate-y-20 uppercase group-hover:translate-y-0 duration-300 group-hover:text-indigo-400">
-                            02⏤ Development </h1>
-                        <p className="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500 "> 
-                            A simple site to filter, sort, and aggregate to online order items from a resteraunt using react.
-                        </p>
-                    </div>
-                </div>
-                </Link>
-            </article>
-            
-            <article
-                className="mx-auto shadow-xl bg-cover bg-center min-h-150 w-full md:w-auto relative border-8 border-black transform duration-500 hover:-translate-y-12 group"
-                style={{backgroundImage: `url(${iterative})`, backgroundBlendMode: 'multiply', backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'}
-            >
-                <Link to="/iterative-design">
-                <div className="relative h-full min-h-150 flex flex-wrap flex-col pt-[30rem]">
-                <div className="bg-black p-12 h-full justify-end flex flex-col">
-                    <h1 className="text-white mt-2 text-xl mb-5 transform translate-y-20 uppercase group-hover:translate-y-0 duration-300 group-hover:text-cyan-400">
-                        03⏤ Iterative Design
-                    </h1>
-                    <p className="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500 ">
-                        Designed a mobile app for the startup Fonda Technologies over multiple iterations.
-                    </p>
-                </div>
-                </div>
-                </Link>
-            </article> */}
-            
+        
             </div>
             </div>
         </section>

@@ -38,14 +38,13 @@ const DevelopmentProcessPage = () => {
           <section className="container-content">
             <h2 className="container-header">Introduction</h2>
             <p className="container-body">
-            This project is about the design and development process 
-            where I created a restaurant webpage using React. The design
-             for this webpage is a result of doing a competitive analysis 
-             on three distinct websites McDonald’s, Chili’s, and In-N-Out. 
-             Through this analysis, I have developed a webpage that uses 
-             the strengths and addresses the weaknesses of each restaurant 
-             thereby incorporating sorting, filtering, and data aggregation 
-             to create an intuitive user experience.
+            This project focuses on the design and development process, where I 
+            created a restaurant webpage using React. The design of this webpage 
+            resulted from a competitive analysis of three distinct websites: 
+            McDonald’s, Chili’s, and In-N-Out. Through this analysis, I developed 
+            a webpage that leverages the strengths and addresses the weaknesses 
+            of each restaurant, incorporating sorting, filtering, and data 
+            aggregation to create an intuitive user experience.
             </p>
           </section>
 
@@ -53,13 +52,13 @@ const DevelopmentProcessPage = () => {
           <section className="container-content">
             <h2 className="container-header">Competitive Analysis</h2>
             <p className="container-body">
-            Below is the competitive analysis that was done for each of the 
-            following restaurants. To guide my analysis, I observed how each
-            sorted and filtered their information, displayed their items,
-            and guided their users to see how their decisions would impact 
-            the user experience. Below is the resulting table of the analysis 
-            as well as a short description for each restaurant describing what 
-            was and was not successful about their design decisions. <b>Click on a 
+            Below is the competitive analysis conducted for each of the following 
+            restaurants. To guide my analysis, I observed how each restaurant 
+            sorted and filtered their information, displayed their items, and 
+            guided their users to understand how these decisions impacted the user 
+            experience. The table below shows the results of the analysis, along with 
+            a brief description for each restaurant, highlighting the successes and 
+            shortcomings of their design choices.  <b>Click on a 
             restaurant's corresponding image to be taken to their webpage.</b>
             </p>
 
@@ -76,15 +75,15 @@ const DevelopmentProcessPage = () => {
             <div class="content-container">
               <div class="text-content">
                 <p>
-                  <b>The most successful aspect of the McDonald's menu webpage is its convenience for obtaining
-                  information.</b> This is because everything a user needs regarding an item's information,
-                  such as allergens or nutrition, can be found on a single page through dropdown items.
-                  The least successful design choice of the McDonald's webpage is the presence of an 
-                  "Order Now" button that requires the user to download the McDonald's app or be redirected 
-                  to another company's webpage. This is a weak point as it adds a substantial amount
-                  of clicks to someone ordering food which can potentially lose customers
-                  as it substantially decreases the efficiency of the page which is a design
-                  principle learned in class.
+                  <b>The most successful aspect of the McDonald's menu webpage is the convenience of 
+                  obtaining information.</b> Everything a user needs regarding an item's details, 
+                  such as allergens or nutrition, can be found on a single page through dropdown 
+                  items. However, the least successful design choice is the presence of an 
+                  "Order Now" button that requires the user to download the McDonald's app or 
+                  redirects them to another company's webpage. This is a weak point because it 
+                  adds unnecessary clicks for customers ordering food, potentially resulting in 
+                  lost sales. This significantly decreases the page's efficiency, which is a design 
+                  principle we learned in class.
                 </p>
               </div>
               <div class="image-content">
@@ -105,17 +104,18 @@ const DevelopmentProcessPage = () => {
             <div class="text-content">
               <p>
                 <b>The biggest strength of the Chili's webpage is that it provides the
-                essentials for each item on a card</b> by including the item's picture, 
-                ingredients, caloric value, price, and an 'add to cart' button. 
-                This is beneficial because it allows users to quickly assess whether
-                they want the item which results in faster ordering. However, the main 
-                weakness of this webpage is that nutritional facts and allergen 
-                information are not only located on a different page but also in a separate 
-                file that needs to be opened. This is problematic because first, users have
-                to locate the small link to the information at the bottom of the item page
-                which contradicts the design principle in class where text shouldn't be too
-                small. Second, the PDF contains a crowded chart with information for the entire 
-                menu, which can lead to mistakes when users try to find specific details.
+                essentials for each item on a card,</b> including the item's picture, ingredients, 
+                aloric value, price, and an "Add to Cart" button. This is beneficial because it 
+                allows users to quickly assess whether they want the item, resulting in faster 
+                ordering. However, the main weakness of this webpage is that nutritional facts 
+                and allergen information are not only located on a different page but also in a 
+                separate file that needs to be opened.
+
+                This is problematic for two reasons. First, users have to find the small link to 
+                the information at the bottom of the item page, which contradicts the design 
+                principle we learned in class that text shouldn't be too small. Second, the PDF 
+                contains a crowded chart with information for the entire menu, which can lead to 
+                mistakes when users try to find specific details.
 
               </p>
             </div>
@@ -171,17 +171,17 @@ const DevelopmentProcessPage = () => {
             <h2 className="container-header">Final Product</h2>
             <p className="container-body">
             Below is the deployed page! <b>Click the image below to be taken to the webpage.</b> The 
-            webpage I created is a menu for a restaurant that aims to merge aspects from each 
-            website I've observed. To incorporate filtering, I implemented buttons on the toolbar. 
-            Clicking these buttons will filter items based on allergen factors and their vegan status. 
-            Clicking the buttons again will revert the view to its original state. For sorting, I 
-            included two dropdown menu items: the first orders items by alphabetical order, price, or 
-            rating, while the second determines whether the order is ascending or descending. There is 
-            also a 'Reset All' button that when clicked, will revert the page to the original state. 
-            Finally, as it's an online menu for a restaurant, there is an 'Add to Cart' button that when 
-            clicked will add the desired item to an easily accessible and modifiable cart. When viewing 
-            the cart, it will allow a user to add or subtract current items, proceed with their purchase, 
-            or restart the process.
+            webpage I created is a menu for a restaurant that aims to merge aspects from each website 
+            I've observed. To incorporate filtering, I implemented buttons on the toolbar. Clicking 
+            these buttons will filter items based on allergen factors and their vegan status. Clicking 
+            the buttons again will revert the view to its original state. For sorting, I included two 
+            dropdown menu items: the first orders items by alphabetical order, price, or rating, while 
+            the second determines whether the order is ascending or descending. There is also a 'Reset All' 
+            button that when clicked, will revert the page to the original state. Finally, as it's an 
+            online menu for a restaurant, there is an 'Add to Cart' button that when clicked will add 
+            the desired item to an easily accessible and modifiable cart. When viewing the cart, it will 
+            allow a user to add or subtract current items, proceed with their purchase, or restart the 
+            process.
             </p>
 
             <a href="https://development-swart.vercel.app/" target="_blank" rel="noopener noreferrer">

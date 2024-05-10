@@ -36,15 +36,15 @@ const IterativeDevelopmentPage = () => {
           <section className="container-content">
             <h2 className="container-header">Introduction</h2>
             <p className="container-body">
-            The goal of this assignment is to create a mobile app for Fonda technologies 
-            that will empower business owners with real-time insights into their finances, 
-            sales, and expenses. Instead of operating blindly and waiting for an 
-            accountant to review their finances, our goal is to provide them with 
-            immediate visibility and control over their financial data. Another important 
-            aspect of this project was that we were able to experience real iteration where
-            we would meet with the company's founder to get feedback on our design. This was also
-            a group project where every step of the process besides the initial sketches were completed 
-            by collaborating as team.
+            This project was completed by a small team of four people, with every step of the 
+            process, besides the initial sketches, done through team collaboration. The goal of
+            this assignment was to create a mobile app for Fonda Technologies that would empower 
+            business owners with real-time insights into their finances, sales, and expenses. 
+            Instead of operating blindly and waiting for an accountant to review their finances, 
+            our objective is to provide them with immediate visibility and control over their financial 
+            data. Another important aspect of this project was to experience real iteration during 
+            the design process, where we met with the company's founder several times to receive 
+            feedback on our design.
             </p>
           </section>
 
@@ -68,15 +68,14 @@ const IterativeDevelopmentPage = () => {
           <div class="content-container">
             <div class="text-content">
               <p>
-                When creating the initial sketches for the Mi Fonda Wallet app, 
-                my goal was to design a user interface that would make information 
-                easily accessible and viewable at a glance. This was crucial because 
-                people in the restaurant business are always busy, and quick access 
-                to information can streamline their decision-making process in day-to-day 
-                tasks. To achieve this, I aimed to create a main dashboard page displaying 
-                the user’s balance and important information below it, complemented by 
-                either a donut graph for a breakdown of income or large navigable icons 
-                to allow quick retrieval of specific information.
+              When creating the initial sketches for the Mi Fonda Wallet app, my goal 
+              was to design a user interface that would make information easily accessible 
+              and viewable at a glance. This was crucial because people in the restaurant 
+              business are always busy, and quick access to information can streamline their 
+              decision-making process in day-to-day tasks. To achieve this, I aimed to create a 
+              main dashboard page displaying the user's balance and important information below 
+              it, complemented by either a donut graph for an income breakdown or large 
+              navigable icons for quick retrieval of specific information.
               </p>
             </div>
             <div class="image-content">
@@ -87,17 +86,20 @@ const IterativeDevelopmentPage = () => {
           <section className="container-content">
             <h2 className="container-header">First Iteration Wireframe</h2>
             <p className="container-body">
-              From left to right, we have: home dashboard, full list of transactions, 
-              and account details. Our first wireframes were an amalgamation of the sketches we all drew 
-              and are common goal was to keep things simple and modern. The dashboard is supposed to be an
-              “at a glance” view of the account. It displays the balance as well as a donut graph to show different 
-              expenses. We later found out that this was not conducive of how a restaurant functions, so 
-              we were forced to re-evaluate down the road. Our transactions page had another graph on it, 
-              but we were not sure at this point what type of graph it would be. We knew we wanted to display 
-              both the revenue and expenses and decided later on to use a bar graph. Finally, our account info 
-              screen had space for us to add multiple different buttons in three categories, Personal, Security, 
-              and Other. We wanted to keep this simple again since there is no need to complicate this crucial 
-              aspect to the apps functionality.
+            From left to right, we have the home dashboard, full list of transactions, 
+            and account details. Our first wireframes were an amalgamation of the sketches 
+            we all drew, and our common goal was to keep things simple and modern. The 
+            ashboard is intended to be an "at-a-glance" view of the account, displaying 
+            the balance and a donut graph to show different expenses. However, we later 
+            found out that this layout did not align with how a restaurant functions, so 
+            we were forced to re-evaluate it later on.
+
+            Our transactions page initially included another graph, though we weren't sure 
+            what type at that point. We knew we wanted to display both revenue and expenses, 
+            and later decided to use a bar graph. Finally, our account info screen included 
+            space for multiple buttons across three categories: Personal, Security, and Other. 
+            We wanted to keep this simple since there is no need to complicate this crucial 
+            aspect of the app's functionality.
             </p>
 
             <div class="image-content">
@@ -108,9 +110,25 @@ const IterativeDevelopmentPage = () => {
           <section className="container-content">
             <h2 className="container-header">Critique & Feedback</h2>
             <p className="container-body">
-              <b>In a critique from peers in our clas we recieved the following feedback:</b>
+              <b>In our first meeting with the founders, we recieved the following feedback:</b>
             </p>
-              
+              <ul className="takeaway-centered-bullets">
+                  <li> He thought that using the categories was cumbersome and difficult as there is no 
+                    robust way of assigning categories and not all users would use it efficiently.
+                  </li>
+
+                  <li> He made several style suggestions such as having a single color background for the dashboard and transactions page 
+                    allong with items only having plain text without the button format.
+                  </li>
+
+                  <li> He liked the idea of the donut but was confused about how the data was being represented and so he told 
+                    us to explore the idea further.
+                  </li>
+                </ul> 
+
+            <p className="container-body">
+              <b>In a critique from peers in our class we recieved the following feedback:</b>
+            </p>
               <ul className="takeaway-centered-bullets">
                 <li> To improve visual representation and understanding, it was recommended to 
                 incorporate a bar chart, which could help restaurant owners better visualize financial data over 
@@ -128,7 +146,7 @@ const IterativeDevelopmentPage = () => {
               </ul>   
                             
             <p className="container-body">
-              <b>During a critique session with Professor Talie the following feedback was provide:</b>
+              <b>During a critique session with Professor Talie the following feedback was provided:</b>
             </p>
             <ul className="takeaway-centered-bullets">
                 <li> She questioned about the app's unique selling points which differentiated from other apps particularly 
@@ -179,16 +197,20 @@ const IterativeDevelopmentPage = () => {
           <section className="container-content">
             <h2 className="container-header">High Fidelity Prototype</h2>
             <p className="container-body">
-              Our high fidelity prototype included a login screen, a home dashboard, a transaction 
-              screen, a transaction details popup, a payee contact book, the send screen, a confirm 
-              send screen, a payment method popup, and an account info page. Throughout the design 
-              we used the Roboto font which aligned with the style guide given to us by Fonda. We 
-              utilized the different heading and body text sizes to emphasize more important points, 
-              such as the balance on the dashboard or the day of the week in transactions. We also 
-              made sure to change our design to emphasize contrast of colors, since part of our feedback 
-              was changing the transactions to have a light background instead of dark. We were able 
-              to keep all things aligned properly using the grid functionality of figma and left adequate 
-              spacing and white space to reduce clutter and keep that modern/simple flow.
+            Our high-fidelity prototype included a login screen, home dashboard, 
+            transaction screen, transaction details popup, payee contact book, 
+            send screen, confirm send screen, payment method popup, and account 
+            info page. Throughout the design, we used the Roboto font, which 
+            aligned with the style guide provided by Fonda. We utilized different 
+            heading and body text sizes to emphasize important points, such as the 
+            balance on the dashboard or the day of the week in transactions.
+
+
+            We also adjusted the design to emphasize color contrast, based on 
+            feedback to change the transactions background from dark to light. 
+            By using Figma's grid functionality, we ensured proper alignment and 
+            left adequate spacing and white space to reduce clutter and maintain a 
+            modern, simple flow.
             </p>
             
           </section>
@@ -236,12 +258,14 @@ const IterativeDevelopmentPage = () => {
             <h2 className="container-header">Final Design</h2>
 
             <p class="container-body"> 
-              <b>Below is our final design.</b> After recieving the constructive critism, we were able to make one last adjustment to get a final design.
-                This design addressed every point of critism starting with the login where we added biometric options in
-                the form a button. We then changed the budget section so that it was now a goal and could be set by the user.
-                The largest changes in this version where in the transactions section we added a side-scrollable bar chart
-                that would let a user see historical data and could also set the time increments as well. As for the analytical
-                tools, we added a feature where a user could tap on a portion of the donut and see a breakdown of its statistics.
+              <b>Below is our final design.</b> After receiving constructive criticism, we made one last 
+              adjustment to reach the final design. This version addressed every point of criticism,
+              starting with the login screen, where we added biometric options in the form of a button. 
+              We then changed the budget section so that it was now a goal that could be set by the user.
+              The largest changes in this version were in the transactions section, where we added a 
+              side-scrollable bar chart that allows users to see historical data and set the time 
+              increments. For the analytical tools, we included a feature that lets users tap on a portion 
+              of the donut graph to see a breakdown of its statistics.
             </p>
 
 
@@ -257,9 +281,15 @@ const IterativeDevelopmentPage = () => {
             <h2 className="container-header">Key Takeaways</h2>
 
             <ul className="takeaway-centered-bullets">
-              <li><b>Lorem Ipsum.</b> .......</li>
+              <li><b>Any kind of feedback is good feedback.</b> Throughout the project, we embraced constructive criticism from peers,
+              the professor, and the company's founder. Their insights were crucial for us to refine our design as they would give us 
+              suggestions or question things that we may have not thought thoroughly enough leading to a more intuitive and user-friendly app. </li>
 
-              <li><b>Lorem Ipsum.</b> .......</li>
+              <li><b>Designing with the end-user in mind is paramount.</b> In this project, I learned that understanding the unique needs of restaurant owners, 
+              such as quick access to financial insights and streamlined navigation, was key to creating a successful app. By being able to interact with the
+              founder, he was able to give us the perspective of the resteraunt owner which let us make a design that would meet their needs. Ultimately, this project reinforced the importance of balancing 
+              aesthetic design with practical functionality to create a solution that not only looks good but also solves real-world 
+              problems efficiently.</li>
             </ul>
           </section>
         </div>
